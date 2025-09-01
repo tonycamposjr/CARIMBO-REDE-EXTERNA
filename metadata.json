@@ -1,0 +1,5 @@
+{
+  "name": "External Network Stamp & Image Converter",
+  "description": "An application to generate formatted text stamps for external network technicians and a tool to convert BMP images to PNG or JPEG formats.",
+  "requestFramePermissions": []
+}
