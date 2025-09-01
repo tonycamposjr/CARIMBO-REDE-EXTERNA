@@ -1,22 +1,43 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>External Network Stamp & Image Converter</title>
+
+  <!-- Tailwind CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
-<script type="importmap">
-{
-  "imports": {
-    "react": "https://aistudiocdn.com/react@^19.1.1",
-    "react-dom/": "https://aistudiocdn.com/react-dom@^19.1.1/",
-    "react/": "https://aistudiocdn.com/react@^19.1.1/"
+
+  <!-- Importmap para React -->
+  <script type="importmap">
+  {
+    "imports": {
+      "react": "https://esm.sh/react@19.0.0",
+      "react-dom": "https://esm.sh/react-dom@19.0.0"
+    }
   }
-}
-</script>
+  </script>
 </head>
-<body class="bg-gradient-to-br from-[#667eea] to-[#764ba2]">
+<body class="bg-gradient-to-br from-[#667eea] to-[#764ba2] min-h-screen flex items-center justify-center">
+  <!-- Ponto de montagem do React -->
   <div id="root"></div>
+
+  <!-- Script principal -->
+  <script type="module">
+    import React from "react";
+    import { createRoot } from "react-dom/client";
+
+    function App() {
+      return (
+        <div className="text-center text-white">
+          <h1 className="text-4xl font-bold mb-4">🚀 External Network Stamp</h1>
+          <p className="text-lg">Seu site React está funcionando no GitHub Pages!</p>
+        </div>
+      );
+    }
+
+    const root = createRoot(document.getElementById("root"));
+    root.render(<App />);
+  </script>
 </body>
 </html>
